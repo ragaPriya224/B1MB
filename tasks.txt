@@ -1,5 +1,5 @@
 minebrat 
-task:
+DB task:
 
 1. create a database 
 2. create a table with some fields

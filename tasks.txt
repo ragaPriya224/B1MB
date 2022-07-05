@@ -1,0 +1,12 @@
+minebrat 
+task:
+
+1. create a database 
+2. create a table with some fields
+3. add constraints for the fields wherever necessary
+4. change the table name
+5. add a primary key for the suitable column
+6. insert 4 records
+7. update one record
+8. delete a record
+9. drop the table 

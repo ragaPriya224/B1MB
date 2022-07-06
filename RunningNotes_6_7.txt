@@ -1,0 +1,10 @@
+GET  - read
+PUT   - update
+POST  - create
+DELETE - delete 
+-----------------
+maven 
+---------------
+client, server
+response, request
+---------------

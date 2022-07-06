@@ -1,0 +1,32 @@
+200 OK - Can be responded for GET, PUT, PATCH and DELETE, also
+can be use for POST in case the new record creation has
+not happened.
+
+201 Created - Responded for the POST method along with the
+Location header pointing to the new resource created. Can also
+be responded with newly created resource details.
+
+204 No Content - Can be responded for POST and DELETE that does
+not return any content in response.
+
+400 Bad request - Some thing isn’t good in the request body sent.
+
+401 Unauthorized - No authentication provided.
+
+403 Forbidden - Not authorized to use this resource or act on the
+resource
+
+404 Not found - Resource not found
+
+405 Method not allowed - When requested method is not allowed for
+the authenticated used
+
+410 Gone - One use case is on removed version endpoints.
+
+415 Unsupported Media Type - Incorrect content type specified than
+one expected
+
+422 Unprocessable Entity - Possibly there are some validation errors in
+the object.
+
+429 Too Many Requests - In case of rate limiting

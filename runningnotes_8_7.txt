@@ -1,0 +1,15 @@
+topic 
+courses
+lesson 
+
+a topic have multiple courses
+a course have multiple lesson
+
+
+topic:
+
+Get      /topic      get all the topics
+GET     /topic/id   get the particular topic
+POST     /topic      create a new topic
+PUT      /topic/id   update a particular topic
+delete    /topic/id    delete a particular topic 

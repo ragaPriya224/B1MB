@@ -13,3 +13,41 @@ GET     /topic/id   get the particular topic
 POST     /topic      create a new topic
 PUT      /topic/id   update a particular topic
 delete    /topic/id    delete a particular topic 
+
+--------------------------------
+war
+WAR
+JAR?
+POJO
+DESIGN PATTER
+PATTERN
+VIEW
+MODEL
+di
+DI
+--------------------------
+
+@component
+class Home{
+
+@Autowired
+@qualifier("aaa")
+NetConnection  fibre; 
+
+}
+
+
+interface NetConnection{
+
+}
+
+@component("aaa")
+class Bsnl  implements NetConnection{
+
+
+}
+@component
+ class Airtel  implements NetConnection{
+'
+
+}

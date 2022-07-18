@@ -1,0 +1,84 @@
+-----TDD test driven development 
+
+In case of jdbc
+
+
+1 read 
+1 write  10seconds
+
+but, if u use jpa, 
+
+write when needed
+reads from cache 
+faster : 
+''
+-------------
+RELATIONAL DB
+ postgres
+h2db
+mysql
+oracle
+
+
+h2db -> RDB 
+java written
+super easy to do setup/install
+lght weight, so less resources 
+-> not used for production
+-> only for development purpose 
+
+H2db -> 1. in memory 2. server mode
+----------------
+
+
+new maven project -> groupid, artifact id......
+Dependencies to be added :
+
+1. JPA interface
+2. JPA implementation (hibernate....)
+
+But, we don't need both. 
+1 dependency (hibernate ) is enough as of now.  -ADDED
+2. need a driver - to communicate with DB
+
+
+TO DO:
+1. tell where the DB is ...
+2. how to connect with DB
+as of now, dep knows how to talk to DB,
+Doesn't know where the DB 
+
+
+Credentials: username /pwd
+
+------------
+
+1. create a emp class
+2.  create a emp instance
+3.  have jpa, save that emp instance in db 
+
+When it comes to jpa, we  wanna deal with class, objects, not sql queries 
+
+
+JPA does lot of  intelligent defaults. 
+It's gonna auto map props to columns 
+USed annotations:
+
+@Entity
+@Table(name = "EMPLOYEE_DATA_MB")
+@Id
+-------------
+Entity Manager -> it's  service , jpa provides which manages our entity .
+Entity ? -> data holder, jpa needs to deals with 
+              it has to take obj instances to db and vice versa 
+
+EntityManagerFactor -> Entity Manager -> entityTransaction
+@Table -> does map to existing table / create new table as well if not exists
+
+After all this, we need transactin
+
+how to create transaction???
+1. by getting transaction object
+2. starting  and ending transaction 
+
+

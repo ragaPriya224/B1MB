@@ -1,0 +1,64 @@
+Dialect: 
+
+This is a way to specify what kind of sql queries, you need to write . 
+bcoz there can be small differences in sql based on db . 
+
+----
+@Table(name = "EMPLOYEE_DATA_MB")  -> name is optional 
+@Table(name = "EMPLOYEE_DATA_MB", schema = "emp_schema")
+//catalog
+@Basic
+	@Column(name = "emp_name")
+	@Column(unique = true)
+	@Column(unique = true, length =  12)
+	@Column(unique = true, length =  12, nullable = false)
+	@Column(unique = true, length =  12, insertable = false)
+      @Column(unique = true, length =  12, updatable = false)
+
+	@Temporal(TemporalType.DATE)
+	private Date dob;
+
+@Temporal(TemporalType.TIME)
+	private Date dob;
+
+// java.sql.Date just represent DATE without time information 
+while java.util.Date represents both Date and Time information.
+
+    	@Temporal(TemporalType.TIMESTAMP)
+	private Date dob;
+
+
+	@Enumerated(EnumType.ORDINAL)
+	private EmployeeType type;
+
+     @Enumerated(EnumType.STRING)
+	private EmployeeType type;
+
+
+Transient -> where u don't want something to be saved 
+
+	@Transient
+	private String xyz;
+
+
+private transient String xyz;   -> not recommended
+@Basic   Vs @Transient
+save          don''t save 
+
+----------------
+
+
+	@Id
+	@GeneratedValue
+	private int  id;
+
+       @Id
+	@GeneratedValue(strategy = GenerationType.TABLE)
+	private int  id;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private int  id;
+
+
+

@@ -1,3 +1,38 @@
 <property name="hibernate.hbm2ddl.auto" value="update" />
 <property name="hibernate.hbm2ddl.auto" value="validate" />
 <property name="hibernate.hbm2ddl.auto" value="none" />
+<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+<property name="hibernate.hbm2ddl.auto" value="create" />
+
+ value="validate"
+ It will validate whether the table definitions in db matches with the entity definitions 
+ It will not change anything.. no write operations
+ 
+ 
+ value = "update"
+ 
+ It is not gonna drop
+ It'll do update(changing)
+ 
+  
+ value = "create"
+ 
+ -> create everything from scratch 
+ 
+ 
+ Diff:
+ create - drop: when persistance is closed, all data elements be wiped away
+ create          when persistance is closed, all data elements NOT  wiped away
+ 
+ hbm2ddl.auto create-drop :
+If the value is create-drop then, Hibernate first checks for a table and do the necessary operations and finally drops the table after all the operations were completed.
+ hbm2ddl.auto Create :
+If the value is CREATE then the hibernate first drops the existing tables data and structure, then creates new tables and executes the operations on the newly created tables.
+------------------------------
+
+READ entity 
+
+
+1. read emp instances that we already saved in db 
+
+

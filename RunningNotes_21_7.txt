@@ -41,5 +41,17 @@ READ entity
 
 
 1. read emp instances that we already saved in db 
+SELECT * FROM EMPLOYEE_DATA_MB 
+where id = 1
+
+
+1. tablename
+2. value of id 
+In  jpa, dealing with entity classes not tables.. 
+save -. transact needed
+fetch -> not needed 
+
+if id is not present, result is null
+but in sql, it will be empty result set
 
 

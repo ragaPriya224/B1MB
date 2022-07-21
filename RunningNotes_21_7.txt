@@ -1,1 +1,3 @@
 <property name="hibernate.hbm2ddl.auto" value="update" />
+<property name="hibernate.hbm2ddl.auto" value="validate" />
+<property name="hibernate.hbm2ddl.auto" value="none" />

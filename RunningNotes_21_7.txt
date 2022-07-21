@@ -53,5 +53,12 @@ fetch -> not needed
 
 if id is not present, result is null
 but in sql, it will be empty result set
+--------read, update, delete ----------------------------
+creation of second entity
+
+
+
+
+
 
 

@@ -1,6 +1,18 @@
 Eager fetch]
 lazy fetch 
-@OneToOne(fetch = FetchType.LAZY)
+@OneToOne(fetch = FetchType.LAZY)  
+
+In one to one mapping, fetchtype eager is default
 -------------------------------------
 
 
+a employee earns a salary and they get a paycheck for the salary.
+
+
+So, a single employee can contain multiple paystubs
+and  multiple paystubs may belong to a single employee
+
+-------------------------
+
+In one to one mapping, fetchtype lazy is default
+-------------

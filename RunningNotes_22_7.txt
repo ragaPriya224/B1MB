@@ -1,0 +1,6 @@
+Eager fetch]
+lazy fetch 
+@OneToOne(fetch = FetchType.LAZY)
+-------------------------------------
+
+

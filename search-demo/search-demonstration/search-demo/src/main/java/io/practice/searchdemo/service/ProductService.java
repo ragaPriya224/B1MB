@@ -8,4 +8,6 @@ public interface ProductService {
 	
 	List<Product> searchProducts(String query);
 
+	void create(Product p);
+
 }

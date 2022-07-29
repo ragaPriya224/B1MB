@@ -18,5 +18,10 @@ public class ProductServiceImpl implements ProductService{
 		List<Product> productsList = productRepository.searchProducts(query);
 		return productsList;
 	}
+	@Override
+	public void create(Product p) {
+		// TODO Auto-generated method stub
+		productRepository.save(p);
+	}
 
 }

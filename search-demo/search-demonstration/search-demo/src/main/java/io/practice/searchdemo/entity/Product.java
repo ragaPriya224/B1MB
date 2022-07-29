@@ -19,9 +19,8 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Table(name = "productsdemo")
 public class Product {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
-	private UUID id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	private String sku;
 	private String name;
 	private boolean isActive;
@@ -30,11 +29,23 @@ public class Product {
 	@UpdateTimestamp
 	private LocalDateTime updatedDate;
 	
-	public UUID getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(UUID id) {
+	public void setId(long id) {
 		this.id = id;
+	}
+	public LocalDateTime getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(LocalDateTime createdDate) {
+		this.createdDate = createdDate;
+	}
+	public LocalDateTime getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(LocalDateTime updatedDate) {
+		this.updatedDate = updatedDate;
 	}
 	public String getSku() {
 		return sku;
@@ -59,14 +70,17 @@ public class Product {
 	public Product() {
 		
 	}
-	public Product(UUID id, String sku, String name, boolean isActive) {
+	public Product(long id, String sku, String name, boolean isActive, LocalDateTime createdDate,
+			LocalDateTime updatedDate) {
 		super();
 		this.id = id;
 		this.sku = sku;
 		this.name = name;
 		this.isActive = isActive;
+		this.createdDate = createdDate;
+		this.updatedDate = updatedDate;
 	}
-	
+
 	
 
 }

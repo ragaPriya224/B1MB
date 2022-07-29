@@ -3,11 +3,13 @@ package io.practice.searchdemo.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import io.practice.searchdemo.entity.Product;
 import io.practice.searchdemo.repository.ProductRepository;
 import io.practice.searchdemo.service.ProductService;
 
+@Service
 public class ProductServiceImpl implements ProductService{
 
 	@Autowired

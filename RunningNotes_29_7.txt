@@ -2,3 +2,4 @@
 2. configure mysql db 
 3. create entity 
 4. create product repo 
+5. create jpql , native sql queries 

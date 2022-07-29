@@ -3,3 +3,5 @@
 3. create entity 
 4. create product repo 
 5. create jpql , native sql queries 
+6. create a service layer
+

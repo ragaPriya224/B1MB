@@ -1,0 +1,23 @@
+ManyTomany Relationships:
+
+
+emailgroup.java
+
+
+
+e1 is part of both ofthese groups
+e2 is part of company water cooler discussions alone 
+
+
+m->m creation of join table 
+
+
+emp id egid
+1       7
+1       8 
+
+2        7 
+
+
+	@JoinTable(name ="email_group_subscription",joinColumns =  @JoinColumn(name ="EMPLOYEE_ID"))
+

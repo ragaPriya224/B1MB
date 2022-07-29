@@ -1,0 +1,4 @@
+1. create a sp0ring boot project
+2. configure mysql db 
+3. create entity 
+4. create product repo 

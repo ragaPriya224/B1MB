@@ -1,6 +1,7 @@
 package io.practice.searchdemo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 
@@ -14,6 +15,6 @@ public interface ProductService {
 
 	List<Product> getProducts();
 
-	Page<Product> getProductsByPage(Integer pageParam, String sortBy);
+	Page<Product> getProductsByPage(Optional<Integer> pageParam, Optional<String> sortBy);
 
 }

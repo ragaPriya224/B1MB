@@ -1,6 +1,7 @@
 package io.practice.searchdemo.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,8 +36,8 @@ public class ProductController {
 		return productService.getProducts();
 	}
 	@GetMapping("/page")
-	private Page<Product>getProducts(@RequestParam("pageNo") Integer pageParam,
-			@RequestParam("sort")String sortBy) {
+	private Page<Product>getProducts(@RequestParam("pageNo") Optional<Integer> pageParam,
+			@RequestParam("sort")  Optional<String> sortBy) {
 		return productService.getProductsByPage(pageParam,sortBy);
 	}
 

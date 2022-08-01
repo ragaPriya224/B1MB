@@ -1,6 +1,7 @@
 package io.practice.searchdemo.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -33,11 +34,13 @@ public class ProductServiceImpl implements ProductService{
 		List<Product> productList = productRepository.findAll();
 		return productList;
 	}
-	
 	@Override
-	public Page<Product> getProductsByPage(Integer pageParam,String sortBy) {
+	public Page<Product> getProductsByPage(Optional<Integer> pageParam, Optional<String> sortBy) {
 		// TODO Auto-generated method stub
-		return productRepository.findAll(PageRequest.of(pageParam, 5,Direction.ASC,sortBy));
+		return productRepository.findAll(PageRequest.of(pageParam.orElse(0),
+				5,Direction.ASC,sortBy.orElse("id")));
+
 	}
+
 
 }

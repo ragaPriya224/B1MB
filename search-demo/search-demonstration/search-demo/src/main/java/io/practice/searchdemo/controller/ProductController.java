@@ -35,8 +35,9 @@ public class ProductController {
 		return productService.getProducts();
 	}
 	@GetMapping("/page")
-	private Page<Product>getProducts(@RequestParam("pageNo") Integer pageParam) {
-		return productService.getProductsByPage(pageParam);
+	private Page<Product>getProducts(@RequestParam("pageNo") Integer pageParam,
+			@RequestParam("sort")String sortBy) {
+		return productService.getProductsByPage(pageParam,sortBy);
 	}
 
 }

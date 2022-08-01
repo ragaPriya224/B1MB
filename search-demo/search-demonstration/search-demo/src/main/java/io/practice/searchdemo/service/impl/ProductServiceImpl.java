@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import io.practice.searchdemo.entity.Product;
@@ -34,9 +35,9 @@ public class ProductServiceImpl implements ProductService{
 	}
 	
 	@Override
-	public Page<Product> getProductsByPage(Integer pageParam) {
+	public Page<Product> getProductsByPage(Integer pageParam,String sortBy) {
 		// TODO Auto-generated method stub
-		return productRepository.findAll(PageRequest.of(pageParam, 5));
+		return productRepository.findAll(PageRequest.of(pageParam, 5,Direction.ASC,sortBy));
 	}
 
 }

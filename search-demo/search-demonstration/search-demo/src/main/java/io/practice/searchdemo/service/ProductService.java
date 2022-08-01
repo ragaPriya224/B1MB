@@ -14,6 +14,6 @@ public interface ProductService {
 
 	List<Product> getProducts();
 
-	Page<Product> getProductsByPage(Integer pageParam);
+	Page<Product> getProductsByPage(Integer pageParam, String sortBy);
 
 }

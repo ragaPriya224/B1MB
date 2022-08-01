@@ -3,6 +3,7 @@ package io.practice.searchdemo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,6 +33,10 @@ public class ProductController {
 	@GetMapping
 	public List<Product> getProducts() {
 		return productService.getProducts();
+	}
+	@GetMapping("/page")
+	private Page<Product>getProducts(@RequestParam("pageNo") Integer pageParam) {
+		return productService.getProductsByPage(pageParam);
 	}
 
 }

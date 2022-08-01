@@ -2,6 +2,8 @@ package io.practice.searchdemo.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import io.practice.searchdemo.entity.Product;
 
 public interface ProductService {
@@ -11,5 +13,7 @@ public interface ProductService {
 	void create(Product p);
 
 	List<Product> getProducts();
+
+	Page<Product> getProductsByPage(Integer pageParam);
 
 }
